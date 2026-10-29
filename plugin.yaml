@@ -1,0 +1,43 @@
+name: raven
+label: Raven
+kind: platform
+version: 0.1.0
+description: >
+  Raven (Frappe chat) gateway adapter for Hermes Agent. Hermes signs in as a
+  normal Raven user, polls Raven's unread watermark for new messages, answers
+  direct messages, and answers channel messages that @mention it.
+author: Gajendra
+requires_env:
+  - name: RAVEN_URL
+    description: "Frappe site URL that runs Raven (e.g. https://chat.example.com)"
+    prompt: "Raven site URL"
+    password: false
+  - name: RAVEN_API_KEY
+    description: "API key of the Frappe user Hermes signs in as"
+    prompt: "API key"
+    password: false
+  - name: RAVEN_API_SECRET
+    description: "API secret of the same Frappe user"
+    prompt: "API secret"
+    password: true
+optional_env:
+  - name: RAVEN_ALLOWED_USERS
+    description: "Comma-separated emails allowed to talk to Hermes"
+    prompt: "Allowed users (comma-separated emails)"
+    password: false
+  - name: RAVEN_ALLOW_ALL_USERS
+    description: "Let every Raven user talk to Hermes (true/false)"
+    prompt: "Allow all users? (true/false)"
+    password: false
+  - name: RAVEN_REQUIRE_MENTION
+    description: "In channels, answer only when @mentioned (true/false, default true). DMs always get answers."
+    prompt: "Require @mention in channels? (true/false)"
+    password: false
+  - name: RAVEN_POLL_INTERVAL
+    description: "Seconds between checks for new messages (default 2)"
+    prompt: "Poll interval seconds"
+    password: false
+  - name: RAVEN_HOME_CHANNEL
+    description: "Channel ID or user email for cron and notification delivery"
+    prompt: "Home channel ID or email"
+    password: false
