@@ -1,6 +1,6 @@
-# Hermes Raven
+# Hermes Raven Plugin
 
-Use [Raven](https://github.com/The-Commit-Company/raven), the Frappe chat app, as a [Hermes Agent](https://github.com/NousResearch/hermes-agent) channel, the same way you use Telegram.
+A [Hermes Agent](https://github.com/NousResearch/hermes-agent) plugin that lets you use [Raven](https://github.com/The-Commit-Company/raven), the Frappe chat app, as a Hermes channel.
 
 - DM Hermes and it replies.
 - In a channel, @mention Hermes and it replies with a quote of your message.
@@ -23,7 +23,7 @@ Hermes signs in as a normal Raven user with an API key. It polls Raven's own unr
 4. Install the plugin and turn it on:
 
    ```bash
-   git clone <this repo> ~/.hermes/plugins/raven
+   git clone https://github.com/gajjug004/hermes-raven-plugin.git ~/.hermes/plugins/raven
    hermes plugins enable raven
    ```
 
